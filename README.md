@@ -9,3 +9,12 @@ Test Data for GeoTIFFs
 - GeoTIFF with ModelTransformation and no ModelPixelScale originally via https://github.com/geotiffjs/geotiff.js/issues/40
 - [SAR](https://en.wikipedia.org/wiki/Synthetic-aperture_radar) Image of [Mount Yasur](https://en.wikipedia.org/wiki/Mount_Yasur) from [Umbra Space Open Data Program](https://umbra.space/open-data).  Discussed here https://github.com/stac-utils/stac-layer/issues/61.  Downloaded via [stac-browser](https://radiantearth.github.io/stac-browser/#/external/s3.us-west-2.amazonaws.com/umbra-open-data-catalog/stac/2023/2023-02/2023-02-12/6d584f33-0489-47dd-9412-14d2c83532fc/6d584f33-0489-47dd-9412-14d2c83532fc.json?.asset=asset-GEC) and clipped using `gdal_translate 2023-02-12-21-33-56_UMBRA-04_GEC.tiff -srcwin 4000 3000 2000 2000 umbra_mount_yasur.tiff`. Provided under [CC-by-4.0](https://creativecommons.org/licenses/by/4.0/).  This image uses UTM with a GeoTransform.
 - Global Map of Total Area of Harvested Wheat by MapSPAM
+
+### downloading
+The following shell script will download and unpack the test data in your current directory
+```sh
+wget https://github.com/GeoTIFF/test-data/archive/refs/heads/main.zip -O geotiff-test-data.zip
+unzip -j -o geotiff-test-data.zip "test-data-*/files/*" -d .
+unzip spam2005v3r2_harvested-area_wheat_total.tiff.zip
+rm geotiff-test-data.zip spam2005v3r2_harvested-area_wheat_total.tiff.zip
+```
