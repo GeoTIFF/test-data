@@ -10,6 +10,7 @@ Test Data for GeoTIFFs
 - [SAR](https://en.wikipedia.org/wiki/Synthetic-aperture_radar) Image of [Mount Yasur](https://en.wikipedia.org/wiki/Mount_Yasur) from [Umbra Space Open Data Program](https://umbra.space/open-data).  Discussed here https://github.com/stac-utils/stac-layer/issues/61.  Downloaded via [stac-browser](https://radiantearth.github.io/stac-browser/#/external/s3.us-west-2.amazonaws.com/umbra-open-data-catalog/stac/2023/2023-02/2023-02-12/6d584f33-0489-47dd-9412-14d2c83532fc/6d584f33-0489-47dd-9412-14d2c83532fc.json?.asset=asset-GEC) and clipped using `gdal_translate 2023-02-12-21-33-56_UMBRA-04_GEC.tiff -srcwin 4000 3000 2000 2000 umbra_mount_yasur.tiff`. Provided under [CC-by-4.0](https://creativecommons.org/licenses/by/4.0/).  This image uses UTM with a GeoTransform.
 - Global Map of Total Area of Harvested Wheat by MapSPAM
 - Global Fishing Watch derived dataset that covers [The Azores](https://en.wikipedia.org/wiki/Azores).  See https://globalfishingwatch.org/datasets-and-code/
+- Digital Earth Australia wetness dataset, in EPSG:3577. [Original source](https://dea-public-data.s3.ap-southeast-2.amazonaws.com/derivative/ga_ls_tc_pc_cyear_3/1-0-0/x17/y37/2022--P1Y/ga_ls_tc_pc_cyear_3_x17y37_2022--P1Y_final_wet_pc_50.tif). Downsampled to 60m res and reduced overviews to 4 with `gdal_translate`. [File here](files/ga_ls_tc_pc_cyear_3_x17y37_2022--P1Y_final_wet_pc_50_LQ.tif).
 
 ### downloading
 The following shell script will download and unpack the test data in your current directory
