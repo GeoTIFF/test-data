@@ -11,6 +11,7 @@ Test Data for GeoTIFFs
 - Global Map of Total Area of Harvested Wheat by MapSPAM
 - Global Fishing Watch derived dataset that covers [The Azores](https://en.wikipedia.org/wiki/Azores).  See https://globalfishingwatch.org/datasets-and-code/
 - Digital Earth Australia wetness dataset, in EPSG:3577. [Original source](https://dea-public-data.s3.ap-southeast-2.amazonaws.com/derivative/ga_ls_tc_pc_cyear_3/1-0-0/x17/y37/2022--P1Y/ga_ls_tc_pc_cyear_3_x17y37_2022--P1Y_final_wet_pc_50.tif). Downsampled to 60m res and reduced overviews to 4 with `gdal_translate`. [File here](files/ga_ls_tc_pc_cyear_3_x17y37_2022--P1Y_final_wet_pc_50_LQ.tif).
+- Antarctica Sea Ice in Antarctic Polar Stereographic (EPSG:3031) with Float32 Encoding.  Originally discussed and shared here: https://github.com/GeoTIFF/georaster-layer-for-leaflet/issues/105#issuecomment-1244965784.  (I think the original data source is https://www.seaice.uni-bremen.de)
 
 ### downloading
 The following shell script will download and unpack the test data in your current directory
